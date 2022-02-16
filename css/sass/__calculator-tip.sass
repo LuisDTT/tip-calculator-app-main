@@ -1,0 +1,188 @@
+.main
+    background: $main-bg
+    min-height: 100vh
+    font-family: 'Space Mono', monospace
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+
+.calculator
+    background: $white
+    border-radius: 20px
+    padding: 2.5em
+    min-width: 150px
+    max-width: 450px
+    margin: 0 .5em
+    box-shadow: 0px 10px 30px 0 rgba(100, 100, 100, .2)
+    
+
+.user
+    &__bill-box
+        position: relative
+        display: flex
+        margin-top: 7px
+    &__bill
+        &-title
+            font-size: 14px
+            font-weight: 700
+            color: $dark-grayish-cyan
+        &-input
+            width: 100%
+            background: $light-grayish-cyan
+            border: none
+            outline: none
+            text-align: right
+            font-size: 24px
+            padding: 7px 15px
+            color: $very-dark-cyan
+            font-weight: 700
+            border-radius: 5px
+            &:focus
+                outline: 2px solid $strong-cyan
+            &::-webkit-inner-spin-button
+                -webkit-appearance: none
+        &-icon-dollar
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 1em
+            margin: auto
+    &__tip
+        &-title
+            color: $dark-grayish-cyan
+            margin-bottom: 13px
+    &__tip-grid
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 1em
+        margin-bottom: 2em
+    &__tip-input
+        background: $very-dark-cyan
+        color: $white
+        border: none
+        border-radius: 5px
+        padding: 10px
+        font-weight: 700
+        font-size: 24px
+        &:hover
+            cursor: pointer
+            background: #9fe8df
+            color: $very-dark-cyan
+    &__tip-input--active
+        background: $strong-cyan
+        color: $very-dark-cyan
+    &__tip-custom
+        display: flex
+    &__tip-input--custom
+        width: 100%
+        border: none
+        border-radius: 5px
+        padding: 10px
+        font-weight: 700
+        font-size: 22px
+        display: flex
+        outline: none
+        background: $light-grayish-cyan
+        text-align: right
+        color: $very-dark-cyan
+        &::-webkit-inner-spin-button
+            -webkit-appearance: none
+        &:hover
+            cursor: text
+            background: none
+        &:focus
+            outline: 2px solid $strong-cyan
+    &__num-people
+        &-text
+            position: relative
+            font-size: 14px
+            font-weight: 700
+        &-title
+            color: $dark-grayish-cyan
+        &-box
+            display: flex
+            position: relative
+            margin-top: 7px
+
+        &-input
+            width: 100%
+            background: $light-grayish-cyan
+            border: none
+            outline: none
+            text-align: right
+            font-size: 24px
+            padding: 7px 15px
+            color: $very-dark-cyan
+            font-weight: 700
+            border-radius: 5px
+            &::-webkit-inner-spin-button
+                -webkit-appearance: none
+            &:focus
+                outline: 2px solid $strong-cyan
+        &-input--error
+            outline: 2px solid $error-color
+        &-icon
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 1em
+            margin: auto
+        &-error
+           margin: 0
+           position: absolute
+           top: 0
+           right: 0
+           color: $error-color
+           display: none
+           &--active
+               display: block
+
+.response
+    background: $very-dark-cyan
+    border-radius: 15px
+    padding: 1.5em
+    margin-top: 2em
+    &__text-title
+        color: $white
+        font-weight: 700
+        font-size: 16px
+        margin-bottom: 5px
+    &__text-accent
+        color: $headings-color
+        font-weight: 400
+        font-size: 13px
+        margin-top: 0
+    &__flex
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__value
+        color: $strong-cyan
+        font-size: 3rem
+        margin: 0
+        font-weight: 700
+    &__btn-reset
+        background: $strong-cyan
+        color: $very-dark-cyan
+        font-weight: 700
+        font-size: 19px
+        text-transform: uppercase
+        border: none
+        width: 100%
+        height: 45px
+        border-radius: 5px
+        cursor: pointer
+        &:hover
+            background: #9fe8df
+        &--active
+            cursor: default
+            opacity: .4
+            &:hover
+                background: $strong-cyan
+
+.attribution
+    position: fixed
+    bottom: 0
+    font-size: 12px
+    
